@@ -1,0 +1,226 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.sr_hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #201c29, #100e17); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #201c29,
+    #100e17
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: rgba(#100e17, 1);
+  background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+
+  .sr_hero--splash {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .sr_hero--content {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    .sr_hero--title {
+      font-size: 8rem;
+      line-height: 7rem;
+      font-weight: 600;
+      margin: 0 0 0 0;
+      letter-spacing: -5px;
+      span {
+        font-weight: 200;
+      }
+    }
+
+    .sr_hero--description {
+      margin-top: 10px;
+      font-weight: 200;
+      padding: 0 15px;
+    }
+  }
+
+  /*  .sr_hero--overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color:rgba(#000, .5);
+        background-image: url("https://www.transparenttextures.com/patterns/brilliant.png")
+    } */
+
+  @media (max-width: 767px) {
+    .sr_hero--content {
+      .sr_hero--title {
+        font-size: 5rem;
+        line-height: 5rem;
+      }
+    }
+  }
+
+  @media (max-width: 460px) {
+    .sr_hero--content {
+      .sr_hero--title {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    padding-top: 55px;
+  }
+}
+
+.sr_figure {
+  text-align: center;
+  position: relative;
+  margin-bottom: 25px;
+  .sr_figure--caption {
+    font-size: 0.8rem;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    padding: 10px 25px;
+    border-radius: 3px;
+    position: absolute;
+    right: -5px;
+    bottom: -20px;
+    z-index: 1;
+    &.--left {
+      right: unset;
+      left: -5px;
+    }
+  }
+}
+
+.sr_features--figures {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 1rem rgba($primary, 0.05) !important;
+      }
+    }
+
+    &.active {
+      img {
+        transform: translateY(-3px);
+        border: 2px solid $primary;
+        box-shadow: 0 1rem 1rem rgba($primary, 0.05) !important;
+      }
+
+      span {
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+
+    img {
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      transition: all ease-in-out 0.2s;
+    }
+
+    span {
+      margin-top: 5px;
+      display: block;
+    }
+  }
+}
+
+.sr_launch--demo {
+  color: #fff;
+  text-align: center;
+
+  h3 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+    font-weight: 200;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .btn-launch {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 767px) {
+    h3 {
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+    .btn-launch {
+      font-size: 1rem;
+    }
+  }
+}
+
+.sr_scroll--top-wrapper {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 99999999;
+  background: $primary;
+  background: -webkit-linear-gradient(-35deg, $primary, $red);
+  background: linear-gradient(-35deg, $primary, $red);
+  color: #eeeeee;
+  width: 50px;
+  height: 48px;
+  line-height: 48px;
+  right: 30px;
+  bottom: 30px;
+  padding-top: 2px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.sr_scroll--top-wrapper:hover {
+  background-color: #888888;
+}
+.sr_scroll--top-wrapper.show {
+  visibility: visible;
+  cursor: pointer;
+  opacity: 1;
+}
+.sr_scroll--top-wrapper i.fa {
+  line-height: inherit;
+}
+
+.sr_img-borders {
+  border-right: 6px solid $primary;
+  border-bottom: 6px solid $red;
+}
